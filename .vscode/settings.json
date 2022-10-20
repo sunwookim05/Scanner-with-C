@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "system.h": "c",
+        "scanner.h": "c"
+    }
+}
