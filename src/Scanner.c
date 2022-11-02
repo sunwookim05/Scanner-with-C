@@ -2,115 +2,115 @@
 #include "System.h"
 #include "Scanner.h"
 
-void* nextChar(void){
+char nextChar(void){
     char c;
     scanf("%c", &c);
     getchar();
-    return (char*)c;
+    return c;
 }
 
-void* nextByte(void){
+int8_t nextByte(void){
     int8_t b;
     scanf("%hhd", &b);
     getchar();
-    return (int8_t*)b;
+    return b;
 }
 
-void* nextShort(void){
+int16_t nextShort(void){
     int16_t s;
     scanf("%hd", &s);
     getchar();
-    return (int16_t*)s;
+    return s;
 }
 
-void* nextInt(void){
+int32_t nextInt(void){
     int32_t i;
     scanf("%d", &i);
     getchar();
-    return (int32_t*)i;
+    return i;
 }
 
-void* nextLong(void){
+int64_t nextLong(void){
     int64_t l;
     scanf("%lld", &l);
     getchar();
-    return (int64_t*)l;
+    return l;
 }
 
-void* nextUByte(void){
+uint8_t nextUByte(void){
     uint8_t b;
     scanf("%hhu", &b);
     getchar();
-    return (uint8_t*)b;
+    return b;
 }
 
-void* nextUShort(void){
+uint16_t nextUShort(void){
     uint16_t s;
     scanf("%hu", &s);
     getchar();
-    return (uint16_t*)s;
+    return s;
 }
 
-void* nextUInt(void){
+uint32_t nextUInt(void){
     uint32_t i;
     scanf("%u", &i);
     getchar();
-    return (uint32_t*)i;
+    return i;
 }
 
-void* nextULong(void){
+uint64_t nextULong(void){
     uint64_t l;
     scanf("%llu", &l);
     getchar();
-    return (uint64_t*)l;
+    return l;
 }
 
-void* nextBoolean(void){
+boolean nextBoolean(void){
     String s = (String)calloc(0, sizeof(char) * 5);
     scanf("%s", s);
     if(atoi(s)|| !strncmp(s, "true", 4) || !strncmp(s, "True", 4) || !strncmp(s, "TRUE", 4)){
         free(s);
-        return (boolean*)true;
+        return true;
     }else{
         free(s);
-        return (boolean*)false;
+        return false;
     }
 }
 
-void* nextFloat(void){
+float nextFloat(void){
     float f;
     scanf("%f", &f);
     getchar();
-    return (float*)f;
+    return f;
 }
 
-void* nextDouble(void){
+double nextDouble(void){
     double d;
     scanf("%lf", &d);
     getchar();
-    return (double*)d;
+    return d;
 }
 
-void* nextLDouble(void){
+long double nextLDouble(void){
     long double ld;
     scanf("%Lf", &ld);
     getchar();
-    return (long double*)ld;
+    return ld;
 }
 
-void* next(void){
+String next(void){
     String s = (String)calloc(0, sizeof(char) * 4096);
     scanf("%s", s);
     s = (String)realloc(s, sizeof(char) * (strlen(s) + 1));
     getchar();
-    return (String*)s;
+    return s;
 }
 
-void* nextLine(void){
+String nextLine(void){
     String s = (String)calloc(0, sizeof(char) * 4096);
     scanf("%[^\n]", s);
     getchar();
-    return (String*)s;
+    return s;
 }
 
 /**
@@ -122,21 +122,21 @@ void* nextLine(void){
 */
 Scanner new_Scanner(struct __stdin_t source){
     Scanner scanner = {
-        .nextChar = (char(*)(void))nextChar,
-        .nextByte = (int8_t(*)(void))nextByte,
-        .nextShort = (int16_t(*)(void))nextShort,
-        .nextInt = (int32_t(*)(void))nextInt,
-        .nextLong = (int64_t(*)(void))nextLong,
-        .nextUByte = (uint8_t(*)(void))nextUByte,
-        .nextUShort = (uint16_t(*)(void))nextUShort,
-        .nextUInt = (uint32_t(*)(void))nextUInt,
-        .nextULong = (uint64_t(*)(void))nextULong,
-        .nextBoolean = (boolean(*)(void))nextBoolean,
-        .nextFloat = (float(*)(void))nextFloat,
-        .nextDouble = (double(*)(void))nextDouble,
-        .nextLDouble = (long double(*)(void))nextLDouble,
-        .next = (String(*)(void))next,
-        .nextLine = (String(*)(void))nextLine
+        .nextChar = nextChar,
+        .nextByte = nextByte,
+        .nextShort = nextShort,
+        .nextInt = nextInt,
+        .nextLong = nextLong,
+        .nextUByte = nextUByte,
+        .nextUShort = nextUShort,
+        .nextUInt = nextUInt,
+        .nextULong = nextULong,
+        .nextBoolean = nextBoolean,
+        .nextFloat = nextFloat,
+        .nextDouble = nextDouble,
+        .nextLDouble = nextLDouble,
+        .next = next,
+        .nextLine = nextLine
     };
     return scanner;
 }

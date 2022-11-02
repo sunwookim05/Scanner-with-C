@@ -6,9 +6,9 @@ gcc -c src\Systemout.c -I inc\
 
 gcc -c src\Scanner.c -I inc\
 
-gcc -c src\ScannerTest.c -I inc\
+gcc -c src\main.c -I inc\
 
-gcc -o Scanner Systemout.o Scanner.o ScannerTest.o
+gcc -o Scanner Systemout.o Scanner.o main.o
 
 .\Scanner
 
