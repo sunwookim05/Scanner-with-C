@@ -9,6 +9,10 @@ int main(void){
 
     System.out.print("char: ");
     char j = sc.nextChar();
+    System.out.print("byte: ");
+    byte p = sc.nextByte();
+    System.out.print("ubyte: ");
+    ubyte q = sc.nextUByte();
     System.out.print("int8_t: ");
     int8_t a = sc.nextByte();
     System.out.print("int16_t: ");
@@ -40,6 +44,8 @@ int main(void){
 
     System.out.println(" ");
     System.out.println("char: %c", j);
+    System.out.println("byte: %d", p);
+    System.out.println("ubyte: %u", q);
     System.out.println("int8_t: %d", a);
     System.out.println("int16_t: %d", b);
     System.out.println("int32_t: %d", c);
