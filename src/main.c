@@ -2,7 +2,7 @@
 #include "System.h"
 #include "Scanner.h"
 
-import Sys System;
+import SYSTEM System;
 
 int main(void){
     Scanner sc = new_Scanner(System.in);
