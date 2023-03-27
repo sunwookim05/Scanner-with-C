@@ -2,7 +2,7 @@
 #include "System.h"
 #include "Scanner.h"
 
-import Sys System;
+import SYSTEM System;
 
 int main(void){
     Scanner sc = new_Scanner(System.in);
@@ -42,7 +42,7 @@ int main(void){
     System.out.print("String with space: ");
     String o = sc.nextLine();
 
-    System.out.println(" ");
+    System.out.println("");
     System.out.println("char: %c", j);
     System.out.println("byte: %d", p);
     System.out.println("ubyte: %u", q);
