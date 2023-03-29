@@ -8,7 +8,7 @@ gcc -c src\Scanner.c -I inc\
 
 gcc -c src\main.c -I inc\
 
-gcc -o Scanner Systemout.o Scanner.o main.o
+gcc -o Scanner System.o Scanner.o main.o
 
 .\Scanner
 
