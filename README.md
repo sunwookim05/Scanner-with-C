@@ -2,7 +2,7 @@
 
 --------Scanner--------
 
-gcc -c src\Systemout.c -I inc\
+gcc -c src\System.c -I inc\
 
 gcc -c src\Scanner.c -I inc\
 
