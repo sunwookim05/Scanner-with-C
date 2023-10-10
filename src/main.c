@@ -42,7 +42,7 @@ int main(void){
     System.out.print("String with space: ");
     String o = sc.nextLine();
 
-    System.out.println(" ");
+    System.out.println("");
     System.out.println("char: %c", j);
     System.out.println("byte: %d", p);
     System.out.println("ubyte: %u", q);
